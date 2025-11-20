@@ -1,0 +1,22 @@
+{
+  "name": "dealinstinct",
+  "version": "1.0.0",
+  "description": "Dealinstinct — a Next.js + Plasmic web project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@plasmicapp/host": "^1.0.228",
+    "@plasmicapp/loader-nextjs": "^1.0.444",
+    "next": "^14.2.33",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
