@@ -1,5 +1,5 @@
-import Page from "./[...slug]/page";
+import CatchAllPage from "./[...slug]/page";
 
 export default function RootPage() {
-  return Page({ params: {} });
+  return <CatchAllPage params={{ slug: ["home"] }} />;
 }

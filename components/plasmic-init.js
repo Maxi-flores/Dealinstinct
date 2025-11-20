@@ -5,7 +5,7 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 export const PLASMIC = initPlasmicLoader({
   projects: [
     {
-      id: "kom9pjXFQGjyBNuxy7ERXZ",
+      id: "j2WNNKsjX5V1nEKusoae2g",
       token: process.env.NEXT_PUBLIC_PLASMIC_API_TOKEN,
     },
   ],
