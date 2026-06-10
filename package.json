@@ -1,8 +1,8 @@
 {
   "name": "dealinstinct",
   "version": "1.0.0",
-  "description": "Dealinstinct — a Next.js + Plasmic web project",
-  "main": "index.js",
+  "description": "DealInstinct - Deal discovery platform with scraping, Firebase, and CRM integration",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,9 +14,27 @@
     "@plasmicapp/loader-nextjs": "^1.0.444",
     "next": "^14.2.33",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "firebase": "^10.8.0",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^21.9.0",
+    "zustand": "^4.5.0",
+    "@tanstack/react-query": "^5.24.1",
+    "next-themes": "^0.2.1",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.3.1",
+    "lucide-react": "^0.344.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0"
+  }
 }
