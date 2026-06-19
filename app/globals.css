@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-surface-950 text-surface-900 dark:text-surface-100;
+    @apply antialiased;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-100 dark:bg-surface-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-300 dark:bg-surface-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-surface-400 dark:bg-surface-500;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500/50 ring-offset-2 ring-offset-white dark:ring-offset-surface-900;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/80 dark:bg-surface-800/80 backdrop-blur-xl;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, theme('colors.primary.500') 0%, theme('colors.accent.500') 100%);
+  }
+
+  .gradient-mesh {
+    background-color: #0ea5e9;
+    background-image:
+      radial-gradient(at 40% 20%, hsla(280, 87%, 62%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.3) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, hsla(355, 85%, 63%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, hsla(340, 65%, 52%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(22, 100%, 58%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, hsla(242, 87%, 62%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(343, 87%, 62%, 0.2) 0px, transparent 50%);
+  }
+
+  /* Container utilities */
+  .container-tight {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Text utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-accent-500;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Input styles */
+  .input-base {
+    @apply w-full px-4 py-2.5 rounded-lg border border-surface-300 dark:border-surface-600;
+    @apply bg-white dark:bg-surface-800 text-surface-900 dark:text-surface-100;
+    @apply placeholder:text-surface-400 dark:placeholder:text-surface-500;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500;
+    @apply transition-colors duration-200;
+  }
+
+  /* Button base */
+  .btn-base {
+    @apply inline-flex items-center justify-center font-medium rounded-lg;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply animate-pulse bg-surface-200 dark:bg-surface-700 rounded;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Aspect ratios */
+  .aspect-product {
+    aspect-ratio: 4/5;
+  }
+
+  .aspect-banner {
+    aspect-ratio: 21/9;
+  }
+
+  /* Grid patterns */
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, theme('colors.surface.200') 1px, transparent 1px),
+      linear-gradient(to bottom, theme('colors.surface.200') 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .dark .grid-pattern {
+    background-image:
+      linear-gradient(to right, theme('colors.surface.800') 1px, transparent 1px),
+      linear-gradient(to bottom, theme('colors.surface.800') 1px, transparent 1px);
+  }
+
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+}
